@@ -1,0 +1,24 @@
+{
+  "name": "localized-number-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliotaplant/localized-number-parser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliotaplant/localized-number-parser/issues"
+  },
+  "homepage": "https://github.com/elliotaplant/localized-number-parser#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "typescript": "^4.6.2"
+  }
+}
