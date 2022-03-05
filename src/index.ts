@@ -1,12 +1,12 @@
 const emptyValue = { value: '' };
 
-class LocalizedNumberParser {
+export class LocalizedNumberParser {
   private _group: RegExp;
   private _decimal: RegExp;
   private _numeral: RegExp;
   private _index: (numeralGroup: string) => string;
 
-  constructor(locale: string) {
+  constructor(locale?: string) {
     const parts = new Intl.NumberFormat(locale).formatToParts(12345.6);
     const numerals = [
       ...new Intl.NumberFormat(locale, { useGrouping: false }).format(9876543210),
@@ -23,7 +23,7 @@ class LocalizedNumberParser {
     this._index = (numeralGroup: string) => (index.get(numeralGroup) ?? -1).toString();
   }
 
-  parse(localizedString: string) {
+  parse(localizedString: string): number {
     const numericString = localizedString
       .trim()
       .replace(this._group, '')
@@ -32,4 +32,9 @@ class LocalizedNumberParser {
 
     return numericString ? Number(numericString) : NaN;
   }
+}
+
+export function parseLocalizedNumber(localizedString: string, locale?: string): number {
+  const parser = new LocalizedNumberParser(locale);
+  return parser.parse(localizedString);
 }

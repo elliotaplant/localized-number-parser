@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,10 @@
   },
   "homepage": "https://github.com/elliotaplant/localized-number-parser#readme",
   "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
     "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.6.2"
