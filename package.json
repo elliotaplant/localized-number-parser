@@ -1,6 +1,6 @@
 {
   "name": "localized-number-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A parser for localized numbers",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
